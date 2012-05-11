@@ -36,21 +36,23 @@ procedure will most likely be to get your email working using only Django, then
 change `EMAIL_BACKEND` to `CELERY_EMAIL_BACKEND`, and then add the new
 `EMAIL_BACKEND` setting from above.
 
+### Available settings
+
 <table>
   <tr>
     <th>Name</th><th>Default</th><th>Description</th>
   </tr>
   <tr>
-    <td>`USE_CELERY`</td><td>`True`</td><td>Used to disable running tasks in Celery</td>
+    <td><code>USE_CELERY</code></td><td><code>True</code></td><td>Used to disable running tasks in Celery</td>
   </tr>
   <tr>
-    <td>`CELERY_EMAIL_BACKEND`</td><td>`django.core.mail.backends.smtp.EmailBackend`</td><td>See above</td>
+    <td><code>CELERY_EMAIL_BACKEND</code></td><td><code>django.core.mail.backends.smtp.EmailBackend</code></td><td>See above</td>
   </tr>
   <tr>
-    <td>`CELERY_EMAIL_TASK_CONFIG`</td><td>{}</td><td>Additional Celery task configuration</td>
+    <td><code>CELERY_EMAIL_TASK_CONFIG</code></td><td><code>{'name': 'celery_mailer_send', 'ignore_result': True}</code></td><td>Additional <a href="http://celery.readthedocs.org/en/latest/userguide/tasks.html#basics">Celery Task</a> configuration</td>
   </tr>
 </table>
 
 ## Acknowledgements
 
-* Based upon Paul McLanahan's [django-celery-email](https://bitbucket.org/pmclanahan/django-celery-email).
+* This is a fork of Paul McLanahan's [django-celery-email](https://bitbucket.org/pmclanahan/django-celery-email).
