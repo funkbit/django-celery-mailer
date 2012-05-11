@@ -22,10 +22,16 @@ def send_email(message, **kwargs):
     
     try:
         result = conn.send_messages([message])
-        logger.debug('Successfully sent email message to %r.', message.to)
+        logger.debug('Successfully sent email message to %r.' % message.to)
         return result
+    
     except Exception, e:
+        
         # Catching all exceptions b/c it could be any number of things
         # depending on the backend
         logger.warning('Failed to send email message to %r, retrying.' % message.to)
-        send_email.retry(exc=e)
+        
+        if getattr(settings, 'USE_CELERY', True):
+            send_email.retry(exc=e)
+        else:
+            return None
