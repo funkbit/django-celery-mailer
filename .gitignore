@@ -1,0 +1,2 @@
+*.egg*
+test_project/test.db
