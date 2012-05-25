@@ -25,6 +25,7 @@ setup(
     author='Funkbit AS',
     author_email='post@funkbit.no',
     url='https://github.com/funkbit/django-celery-mailer',
+    license='BSD',
     packages=['celery_mailer',],
     install_requires=[
         'django-celery>=2.2.0',
@@ -33,7 +34,6 @@ setup(
         'django>=1.3,<1.5',
     ],
     test_suite='test_project.test_runner.runtests',
-    license='BSD',
     classifiers = (
         'Development Status :: 3 - Alpha',
         'Framework :: Django',

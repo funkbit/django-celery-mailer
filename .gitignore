@@ -1,2 +1,3 @@
-*.egg*
+*.egg
+*.egg-info
 test_project/test.db

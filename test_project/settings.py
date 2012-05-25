@@ -15,7 +15,6 @@ DATABASES = {
     }
 }
 
-
 ROOT_URLCONF = 'test_project.urls'
 
 INSTALLED_APPS = (
@@ -23,8 +22,6 @@ INSTALLED_APPS = (
     'celery_mailer',
     'tester',
 )
-
-#TEST_RUNNER = "test_runner.DJCETestSuiteRunner"
 
 CELERY_ALWAYS_EAGER = True
 CELERY_EMAIL_BACKEND = 'django.core.mail.backends.locmem.EmailBackend'
