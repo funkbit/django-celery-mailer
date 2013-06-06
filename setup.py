@@ -22,11 +22,11 @@ setup(
     version=__version__,
     description='Django email backend that utilizes Celery for task execution.',
     long_description=open('README.md').read(),
-    author='Funkbit AS',
+    author='Funkbit',
     author_email='post@funkbit.no',
     url='https://github.com/funkbit/django-celery-mailer',
     license='BSD',
-    packages=['celery_mailer',],
+    packages=['celery_mailer'],
     install_requires=[
         'django-celery>=2.2.0',
     ],
@@ -34,7 +34,7 @@ setup(
         'django>=1.3,<1.5',
     ],
     test_suite='test_project.test_runner.runtests',
-    classifiers = (
+    classifiers=(
         'Development Status :: 3 - Alpha',
         'Framework :: Django',
         'License :: OSI Approved :: BSD License',
